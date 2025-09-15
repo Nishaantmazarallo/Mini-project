@@ -1,0 +1,382 @@
+/* Interactive Math Game Styles */
+.interactive-math-game {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 25px;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Game Header */
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* Start Screen */
+.game-start-screen {
+  text-align: center;
+}
+
+.difficulty-selector {
+  margin-bottom: 30px;
+}
+
+.difficulty-selector h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.difficulty-btn {
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.difficulty-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.difficulty-btn.active {
+  background: rgba(255, 215, 0, 0.3);
+  border-color: #ffd700;
+  transform: scale(1.05);
+}
+
+.start-game-btn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+.start-game-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+}
+
+/* Game Play Screen */
+.game-play-screen {
+  text-align: center;
+}
+
+.math-problem {
+  margin-bottom: 30px;
+}
+
+.problem-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.number {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 15px;
+  min-width: 60px;
+}
+
+.operator, .equals {
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.answer-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 80px;
+  transition: all 0.3s ease;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Feedback */
+.feedback {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 15px;
+  animation: popIn 0.3s ease;
+}
+
+.feedback.correct {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.feedback.incorrect {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Game Controls */
+.game-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.check-btn, .skip-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-btn {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+}
+
+.skip-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.check-btn:hover, .skip-btn:hover {
+  transform: translateY(-2px);
+}
+
+.check-btn:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+}
+
+.skip-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Game Results */
+.game-results {
+  text-align: center;
+  margin-top: 30px;
+  animation: slideInUp 0.5s ease;
+}
+
+.game-results h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.final-score {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.performance-rating {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+.play-again-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-again-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+}
+
+/* Background Elements */
+.game-background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.math-symbol {
+  position: absolute;
+  font-size: 1.8rem;
+  opacity: 0.1;
+  animation: floatSymbol 6s ease-in-out infinite;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes floatSymbol {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .interactive-math-game {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .game-header h2 {
+    font-size: 2rem;
+  }
+  
+  .problem-display {
+    font-size: 2rem;
+    gap: 10px;
+  }
+  
+  .number {
+    min-width: 50px;
+    padding: 8px 15px;
+  }
+  
+  .answer-input {
+    width: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .game-stats {
+    gap: 20px;
+  }
+  
+  .stat {
+    padding: 12px 20px;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-math-game {
+    padding: 20px 15px;
+  }
+  
+  .game-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .problem-display {
+    font-size: 1.6rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .difficulty-buttons {
+    flex-direction: column;
+  }
+  
+  .game-controls {
+    flex-direction: column;
+  }
+  
+  .check-btn, .skip-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,396 @@
+/* components/Achievements/Achievements.css */
+.achievements-section {
+  background: linear-gradient(135deg, #f9f7fe, #e1f5fe);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(100, 181, 246, 0.05) 0%, transparent 20%);
+  z-index: 0;
+}
+
+.section-title {
+  font-family: 'Baloo Paaji 2', cursive;
+  color: #5E35B1;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #FFD166, #FF9E7D, #FF5252, #7C4DFF, #64B5F6);
+  border-radius: 3px;
+  animation: gradientBG 8s ease infinite;
+  background-size: 400% 400%;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #7C4DFF;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.achievement-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #7C4DFF;
+  text-align: center;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.achievement-card h3 {
+  color: #5E35B1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.achievement-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #333;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.achievement-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #7C4DFF;
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #FF5252;
+  font-size: 1.2em;
+}
+
+/* Medal Animations */
+.medal-animation {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  animation: bounceMedal 2s infinite;
+}
+
+.medal {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.gold .medal {
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.silver .medal {
+  background: radial-gradient(circle at 30% 30%, #C0C0C0, #A0A0A0);
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.7);
+}
+
+.bronze .medal {
+  background: radial-gradient(circle at 30% 30%, #CD7F32, #A0522D);
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.7);
+}
+
+.ribbon {
+  width: 80px;
+  height: 20px;
+  background: #FF5252;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  top: 20px;
+}
+
+.ribbon::before {
+  border-width: 10px 10px 0 0;
+  border-color: #E53935 transparent transparent transparent;
+  left: 0;
+}
+
+.ribbon::after {
+  border-width: 10px 0 0 10px;
+  border-color: #E53935 transparent transparent transparent;
+  right: 0;
+}
+
+/* Celebration Animation */
+.celebration-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.kid {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 0;
+  animation: jump 2s infinite ease-in-out;
+}
+
+.kid1 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%2364B5F6"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%237C4DFF"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%23FFD166"/><path d="M30 60 L20 50 L30 40" stroke="%235E35B1" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%235E35B1" stroke-width="3" fill="none"/></svg>');
+  left: 15%;
+  animation-delay: 0.3s;
+}
+
+.kid2 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%23FF9E7D"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%23FF5252"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%2364B5F6"/><path d="M30 60 L20 50 L30 40" stroke="%235E35B1" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%235E35B1" stroke-width="3" fill="none"/></svg>');
+  right: 15%;
+  animation-delay: 0.6s;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FFD166;
+  opacity: 0;
+  animation: confettiFall 5s linear infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+/* Student Success Image Section */
+.student-success-section {
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1.5rem;
+}
+
+.success-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.success-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(94, 53, 177, 0.9) 0%,
+    rgba(124, 77, 255, 0.8) 50%,
+    rgba(255, 82, 82, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.success-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.success-image-container:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.overlay-content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.success-stats {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.success-stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .student-success-section {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .success-image {
+    height: 300px;
+  }
+
+  .overlay-content h3 {
+    font-size: 2rem;
+  }
+
+  .overlay-content p {
+    font-size: 1rem;
+  }
+
+  .success-stats {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-image {
+    height: 250px;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .overlay-content {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+}

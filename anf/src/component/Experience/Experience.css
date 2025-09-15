@@ -1,0 +1,156 @@
+/* components/Experience/Experience.css */
+.experience-section {
+  background: linear-gradient(135deg, #e1f5fe, #f9f7fe);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 209, 102, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(100, 181, 246, 0.1) 0%, transparent 30%);
+  z-index: 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-year {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #7C4DFF, #64B5F6, #8A2BE2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  margin-right: 2rem;
+  position: relative;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+.timeline-content {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  position: relative;
+  border-left: 5px solid #FFD166;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-left: 5px solid #FF5252;
+}
+
+.timeline-content h3 {
+  color: #5E35B1;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: #7C4DFF;
+  font-weight: 600;
+  margin: 0;
+}
+
+.school-icon {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #FFD166, #FF9E7D);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 150px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #7C4DFF, #64B5F6, #FFD166, #FF5252);
+}
+
+.floating-pencils {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-pencils .pencil {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF9800"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  animation: float 8s infinite ease-in-out;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-year {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .timeline-line {
+    left: 50px;
+  }
+}

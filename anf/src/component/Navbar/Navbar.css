@@ -1,0 +1,96 @@
+/* components/Navbar/Navbar.css */
+nav {
+  background: linear-gradient(90deg,
+    var(--secondary),
+    var(--orange),
+    var(--pink),
+    var(--secondary));
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: gradientBG 8s ease infinite;
+  background-size: 400% 400%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background-color: rgba(255,255,255,0.9);
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-color: var(--white);
+}
+
+nav a:hover::before {
+  left: 100%;
+}
+
+/* Rainbow hover effect */
+nav li:nth-child(1) a:hover { background-color: var(--red); }
+nav li:nth-child(2) a:hover { background-color: var(--orange); }
+nav li:nth-child(3) a:hover { background-color: var(--yellow); }
+nav li:nth-child(4) a:hover { background-color: var(--lime); }
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+}

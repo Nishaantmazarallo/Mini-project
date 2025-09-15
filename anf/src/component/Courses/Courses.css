@@ -1,0 +1,243 @@
+/* components/Courses/Courses.css */
+.courses-section {
+  background: linear-gradient(135deg, #f9f7fe, #e1f5fe);
+  padding: 4rem 1rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M30,10 Q50,5 70,10 T90,30 Q95,50 90,70 T70,90 Q50,95 30,90 T10,70 Q5,50 10,30 T30,10" fill="none" stroke="%235E35B1" stroke-width="1"/></svg>');
+  background-size: 100px 100px;
+  z-index: 0;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.course-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-color: var(--white);
+}
+
+/* Individual Course Colors */
+.abacus {
+  border-top: 5px solid var(--primary);
+  background: linear-gradient(to bottom, rgba(124, 77, 255, 0.1), white);
+}
+
+.vedic {
+  border-top: 5px solid var(--secondary);
+  background: linear-gradient(to bottom, rgba(255, 209, 102, 0.1), white);
+}
+
+.chess {
+  border-top: 5px solid var(--dark);
+  background: linear-gradient(to bottom, rgba(94, 53, 177, 0.1), white);
+}
+
+.drawing {
+  border-top: 5px solid var(--accent);
+  background: linear-gradient(to bottom, rgba(100, 181, 246, 0.1), white);
+}
+
+.english {
+  border-top: 5px solid var(--violet);
+  background: linear-gradient(to bottom, rgba(138, 43, 226, 0.1), white);
+}
+
+.rubiks {
+  border-top: 5px solid var(--orange);
+  background: linear-gradient(to bottom, rgba(255, 165, 0, 0.1), white);
+}
+
+/* Icons */
+.course-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.course-card:hover .course-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
+}
+
+.abacus .course-icon {
+  color: var(--primary);
+}
+
+.vedic .course-icon {
+  color: var(--secondary);
+}
+
+.chess .course-icon {
+  color: var(--dark);
+}
+
+.drawing .course-icon {
+  color: var(--accent);
+}
+
+.english .course-icon {
+  color: var(--violet);
+}
+
+.rubiks .course-icon {
+  color: var(--orange);
+}
+
+/* Course Content */
+.course-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+}
+
+.course-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.course-desc {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.abacus .btn {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.vedic .btn {
+  background-color: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+.chess .btn {
+  background-color: var(--dark);
+  color: white;
+  border-color: var(--dark);
+}
+
+.drawing .btn {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.english .btn {
+  background-color: var(--violet);
+  color: white;
+  border-color: var(--violet);
+}
+
+.rubiks .btn {
+  background-color: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+.course-card:hover .btn {
+  background-color: transparent;
+}
+
+.abacus:hover .btn {
+  color: var(--primary);
+}
+
+.vedic:hover .btn {
+  color: var(--secondary);
+}
+
+.chess:hover .btn {
+  color: var(--dark);
+}
+
+.drawing:hover .btn {
+  color: var(--accent);
+}
+
+.english:hover .btn {
+  color: var(--violet);
+}
+
+.rubiks:hover .btn {
+  color: var(--orange);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .courses-container {
+    grid-template-columns: 1fr;
+  }
+}

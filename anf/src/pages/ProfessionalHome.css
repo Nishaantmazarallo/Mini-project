@@ -1,0 +1,53 @@
+.professional-home {
+  font-family: 'Arial', sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* Additional styling can be added here for spacing, layout, etc. */
+
+.why-choose-us-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.why-choose-us-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.professional-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.professional-footer p {
+  margin: 0;
+  color: #bdc3c7;
+}
+
+/* You would have more styles for footer links, columns, etc. */
+
+/* Re-using button styles from other files for consistency */
+.cta-btn.primary {
+  background: #ff6b6b;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+}

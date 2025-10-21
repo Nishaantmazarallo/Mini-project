@@ -7,7 +7,7 @@
 
 .why-choose-us::before {
   content: '';
-  position: absolute;
+  position: centre;
   top: 0;
   left: 0;
   right: 0;
@@ -35,6 +35,7 @@
   color: #2c3e50;
   margin-bottom: 15px;
   position: relative;
+  text-align: start
 }
 
 .section-title::after {
@@ -55,6 +56,7 @@
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  text-align: center;
 }
 
 .reasons-grid {

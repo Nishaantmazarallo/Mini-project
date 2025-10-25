@@ -44,7 +44,7 @@
 .timeline-year {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #7C4DFF, #64B5F6, #8A2BE2);
+  background: linear-gradient(135deg, #8f4cbc96, #ad31d3, #8A2BE2);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -86,7 +86,7 @@
 }
 
 .timeline-content p {
-  color: #7C4DFF;
+  color: #8f4cbc96;;
   font-weight: 600;
   margin: 0;
 }

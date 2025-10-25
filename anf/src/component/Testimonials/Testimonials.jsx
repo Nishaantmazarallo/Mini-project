@@ -25,8 +25,7 @@ const Testimonials = () => {
       image: '👨‍👧'
     },
     {
-      name: 'Praveen Kumar',
-      role: 'Education Consultant',
+      name: 'Praveen ',
       content: 'Professional, dedicated, and results-oriented. ANF Academy sets the standard for abacus education with their innovative teaching methodologies.',
       rating: 5,
       image: '👩‍💼'

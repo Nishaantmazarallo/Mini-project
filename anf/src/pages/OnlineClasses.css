@@ -1,8 +1,8 @@
 .online-classes-page {
   padding: 2rem 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #f19947f1;
+  color: var(--background-base);
 }
 
 .page-header {
@@ -141,8 +141,8 @@
 .submit-btn {
   grid-column: 1 / -1;
   padding: 1rem 2rem;
-  background: #4CAF50;
-  color: white;
+  background: var(--success);
+  color: var(--background-base);
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
@@ -152,7 +152,7 @@
 }
 
 .submit-btn:hover {
-  background: #45a049;
+  background: #229954;
 }
 
 .submit-btn:disabled {
@@ -171,13 +171,13 @@
 
 .status-message.success {
   background: #d4edda;
-  color: #155724;
+  color: var(--text-dark);
   border: 1px solid #c3e6cb;
 }
 
 .status-message.error {
   background: #f8d7da;
-  color: #721c24;
+  color: var(--text-dark);
   border: 1px solid #f5c6cb;
 }
 

@@ -1,7 +1,7 @@
 .why-choose-us-section {
     padding: 80px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: left
   }
   
   .section-title-wcu {
@@ -9,6 +9,7 @@
     color: #2c3e50;
     margin-bottom: 15px;
     font-family: 'Baloo Paaji 2', cursive;
+    text-align: center
   }
   
   .section-subtitle-wcu {
@@ -16,6 +17,7 @@
     color: #7f8c8d;
     max-width: 700px;
     margin: 0 auto 50px auto;
+    text-align: center;
   }
   
   .features-grid-wcu {
@@ -27,7 +29,7 @@
   }
   
   .feature-card-wcu {
-    background: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);

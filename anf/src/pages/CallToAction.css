@@ -78,7 +78,7 @@
   }
   
   .cta-btn-component.secondary:hover {
-    background: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
     color: #667eea;
     transform: translateY(-3px);
   }

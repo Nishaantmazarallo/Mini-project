@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
   return (
     <section className="why-choose-us-section">
       <div className="container">
-        <h2 className="section-title-wcu">Why Choose ANF Academy?</h2>
+    <h2 className="section-title-wcu">Why Choose ANF Academy?</h2>
         <p className="section-subtitle-wcu">Discover the advantages that make our academy the premier choice for abacus education.</p>
         <div className="features-grid-wcu">
           {features.map((feature, index) => (

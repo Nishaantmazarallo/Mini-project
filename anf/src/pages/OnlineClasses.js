@@ -25,7 +25,7 @@ const OnlineClasses = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/enroll', {
+      const response = await fetch('http://localhost:5000/api/students/enroll', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

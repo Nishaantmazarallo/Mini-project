@@ -22,7 +22,7 @@ const About = () => {
         </div>
 
         <div className="card">
-          <h3>Why Choose ANF Academy?</h3>
+        <h2>Why Choose ANF Academy?</h2>
           <p>At ANF Academy, we take pride in over a decade of experience in nurturing young minds through Abacus training. With a strong foundation built on expertise and quality, we have consistently empowered students of various age groups and academic backgrounds to excel.</p>
         </div>
       </div>

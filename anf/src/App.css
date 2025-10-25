@@ -5,9 +5,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Neue', cursive;
-  background-color: #f9f7fe;
-  overflow-x: hidden;
-  background: radial-gradient(circle at center, #f9f7fe, #e1f5fe);
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  background: linear-gradient(270deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee, #fad0c4, #ffd1ff);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -17,23 +24,18 @@ body {
 }
 
 :root {
-  --primary: #7C4DFF;
-  --secondary: #FFD166;
-  --accent: #64B5F6;
-  --dark: #5E35B1;
-  --light: #E1F5FE;
-  --white: #ffffff;
-  --black: #333333;
-  --violet: #8A2BE2;
-  --magenta: #FF00FF;
-  --cyan: #00FFFF;
-  --lime: #00FF00;
-  --orange: #FFA500;
-  --pink: #FF69B4;
-  --teal: #008080;
-  --indigo: #4B0082;
-  --yellow: #FFFF00;
-  --red: #FF0000;
+  /* New Professional Color Palette */
+  --primary: #4A90E2;         /* Professional Blue */
+  --primary-dark: #357ABD;     /* Darker blue for hovers/gradients */
+  --secondary: #50E3C2;       /* Fresh Mint/Teal accent */
+  --accent: #F5A623;          /* Warm Gold for highlights */
+  --text-dark: #2c3e50;       /* Dark Slate for text */
+  --text-light: #7f8c8d;      /* Muted Gray for subtitles */
+  --background-light:#8f4cbc96; /* Light gray for sections */
+  --background-base: #8f4cbc96;/* White for cards */
+  --border-color: #8f4cbc96;     /* Light gray for borders */
+  --success: #27ae60;         /* Success Green */
+  --error: #e74c3c;           /* Error Red */
 }
 
 /* Animation keyframes */
@@ -114,7 +116,7 @@ body {
 
 /* Professional Business Styling */
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -129,7 +131,7 @@ body {
   font-family: 'Baloo Paaji 2', cursive;
   font-size: 2rem;
   font-weight: 800;
-  color: white;
+  color: var(--background-base);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -139,7 +141,7 @@ nav {
 }
 
 .nav-btn {
-  color: white;
+  color: var(--background-base);
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
@@ -149,8 +151,8 @@ nav {
 }
 
 .nav-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--background-base);
   transform: translateY(-2px);
 }
 
@@ -161,8 +163,8 @@ nav {
 .page-header {
   text-align: center;
   padding: 80px 20px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #8f4cbc96;
+  color: var(--background-base);
 }
 
 .page-header h1 {
@@ -180,19 +182,19 @@ nav {
 .about-page,
 .courses-page,
 .contact-page {
-  background: #f8f9fa;
+  background: var(--background-light);
 }
 
 /* Professional Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo Paaji 2', cursive;
-  color: #2c3e50;
+  color: var(--text-dark);
   line-height: 1.3;
 }
 
 p {
   line-height: 1.6;
-  color: #7f8c8d;
+  color: var(--text-light);
 }
 
 /* Responsive Design */
@@ -247,24 +249,24 @@ html {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--background-base);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
-  background: #667eea;
-  color: white;
+  background: var(--primary);
+  color: var(--background-base);
 }
 
 /* Card Styles */
@@ -273,7 +275,7 @@ html {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
@@ -288,11 +290,11 @@ section {
 }
 
 section:nth-child(even) {
-  background: white;
+  background: var(--background-base);
 }
 
 section:nth-child(odd) {
-  background: #f8f9fa;
+  background: var(--background-light);
 }
 
 /* Professional Form Styles */
@@ -304,7 +306,7 @@ section:nth-child(odd) {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--text-dark);
 }
 
 .form-group input,
@@ -312,7 +314,7 @@ section:nth-child(odd) {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -322,8 +324,8 @@ section:nth-child(odd) {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
 }
 
 /* Professional Table Styles */
@@ -337,17 +339,17 @@ section:nth-child(odd) {
 .table td {
   padding: 1rem;
   text-align: left;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table th {
-  background: #f8f9fa;
+  background: var(--background-light);
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--text-dark);
 }
 
 .table tr:hover {
-  background: #f8f9fa;
+  background: var(--background-light);
 }
 
 /* UI/UX Polish Enhancements */
@@ -357,7 +359,7 @@ section:nth-child(odd) {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   border-top-color: #fff;
   animation: spin 1s ease-in-out infinite;
@@ -381,7 +383,7 @@ section:nth-child(odd) {
 
 /* Focus Styles for Accessibility */
 *:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -390,7 +392,7 @@ a:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -436,8 +438,8 @@ textarea:focus {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #4CAF50;
-  color: white;
+  background: var(--success);
+  color: var(--background-base);
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -446,11 +448,11 @@ textarea:focus {
 }
 
 .toast.error {
-  background: #f44336;
+  background: var(--error);
 }
 
 .toast.success {
-  background: #4CAF50;
+  background: var(--success);
 }
 
 .toast.warning {
@@ -475,7 +477,7 @@ textarea:focus {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   z-index: 1001;
   transform-origin: left;
 }
@@ -538,8 +540,8 @@ textarea:focus {
 @media (prefers-contrast: high) {
   .btn-primary {
     background: #000;
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--background-base);
+    border: 2px solid var(--background-base);
   }
 
   .card {

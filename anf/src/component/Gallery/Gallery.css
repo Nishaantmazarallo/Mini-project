@@ -71,6 +71,7 @@
 .gallery-item:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 15px 30px hsla(var(--hue), 80%, 50%, 0.2);
+  border: 2px solid #667eea;
 }
 
 .gallery-item img {

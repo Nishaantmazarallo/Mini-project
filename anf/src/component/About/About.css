@@ -59,6 +59,10 @@
   animation: colorChange 5s infinite;
 }
 
+.card h2 {
+  text-align: center;
+}
+
 .card p {
   color: var(--black);
   font-size: 1.1rem;

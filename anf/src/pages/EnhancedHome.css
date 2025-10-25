@@ -88,7 +88,7 @@
 }
 
 .stat-card {
-  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;

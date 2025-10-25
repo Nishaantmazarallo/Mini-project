@@ -35,7 +35,7 @@
 }
 
 .service-card {
-  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
   padding: 40px 30px;
   border-radius: 15px;
   text-align: center;
@@ -47,6 +47,7 @@
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
 }
 
 .service-icon {

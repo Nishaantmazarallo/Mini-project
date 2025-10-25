@@ -1,6 +1,6 @@
 /* components/Achievements/Achievements.css */
 .achievements-section {
-  background: linear-gradient(135deg, #f9f7fe, #e1f5fe);
+  background: linear-gradient(135deg, var(--background-light), #e8eaf6);
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
@@ -21,7 +21,7 @@
 
 .section-title {
   font-family: 'Baloo Paaji 2', cursive;
-  color: #5E35B1;
+  color: var(--primary-dark);
   font-size: 3rem;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -40,7 +40,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 5px;
-  background: linear-gradient(90deg, #FFD166, #FF9E7D, #FF5252, #7C4DFF, #64B5F6);
+  background: linear-gradient(90deg, var(--accent), var(--secondary), var(--primary));
   border-radius: 3px;
   animation: gradientBG 8s ease infinite;
   background-size: 400% 400%;
@@ -48,7 +48,7 @@
 
 .section-subtitle {
   text-align: center;
-  color: #7C4DFF;
+  color: var(--primary);
   font-size: 1.5rem;
   margin-bottom: 3rem;
   font-weight: 700;
@@ -68,24 +68,25 @@
 }
 
 .achievement-card {
-  background: white;
+  background: var(--background-base);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
-  border-top: 5px solid #7C4DFF;
+  border-top: 5px solid var(--primary);
   text-align: center;
 }
 
 .achievement-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-top-color: #667eea;
 }
 
 .achievement-card h3 {
-  color: #5E35B1;
+  color: var(--primary-dark);
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -101,7 +102,7 @@
 .achievement-list li {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-dark);
   position: relative;
   padding-left: 1.5rem;
 }
@@ -110,13 +111,13 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #7C4DFF;
+  color: var(--primary);
   font-weight: bold;
 }
 
 .highlight {
   font-weight: bold;
-  color: #FF5252;
+  color: var(--error);
   font-size: 1.2em;
 }
 
@@ -141,24 +142,24 @@
 }
 
 .gold .medal {
-  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  background: radial-gradient(circle at 30% 30%, var(--accent), #f39c12);
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.7);
 }
 
 .silver .medal {
-  background: radial-gradient(circle at 30% 30%, #C0C0C0, #A0A0A0);
+  background: radial-gradient(circle at 30% 30%, #bdc3c7, #95a5a6);
   box-shadow: 0 0 15px rgba(192, 192, 192, 0.7);
 }
 
 .bronze .medal {
-  background: radial-gradient(circle at 30% 30%, #CD7F32, #A0522D);
+  background: radial-gradient(circle at 30% 30%, #e67e22, #d35400);
   box-shadow: 0 0 15px rgba(205, 127, 50, 0.7);
 }
 
 .ribbon {
   width: 80px;
   height: 20px;
-  background: #FF5252;
+  background: var(--error);
   position: absolute;
   top: 40px;
   left: 50%;
@@ -179,13 +180,13 @@
 
 .ribbon::before {
   border-width: 10px 10px 0 0;
-  border-color: #E53935 transparent transparent transparent;
+  border-color: #c0392b transparent transparent transparent;
   left: 0;
 }
 
 .ribbon::after {
   border-width: 10px 0 0 10px;
-  border-color: #E53935 transparent transparent transparent;
+  border-color: #c0392b transparent transparent transparent;
   right: 0;
 }
 
@@ -211,13 +212,13 @@
 }
 
 .kid1 {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%2364B5F6"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%237C4DFF"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%23FFD166"/><path d="M30 60 L20 50 L30 40" stroke="%235E35B1" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%235E35B1" stroke-width="3" fill="none"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%234A90E2"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%2350E3C2"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%23F5A623"/><path d="M30 60 L20 50 L30 40" stroke="%232c3e50" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%232c3e50" stroke-width="3" fill="none"/></svg>');
   left: 15%;
   animation-delay: 0.3s;
 }
 
 .kid2 {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%23FF9E7D"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%23FF5252"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%2364B5F6"/><path d="M30 60 L20 50 L30 40" stroke="%235E35B1" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%235E35B1" stroke-width="3" fill="none"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><circle cx="50" cy="30" r="20" fill="%23F5A623"/><path d="M40 50 L60 50 L55 90 L45 90 Z" fill="%23e74c3c"/><path d="M40 90 L35 140 L45 140 L50 100 L55 140 L65 140 L60 90 Z" fill="%234A90E2"/><path d="M30 60 L20 50 L30 40" stroke="%232c3e50" stroke-width="3" fill="none"/><path d="M70 60 L80 50 L70 40" stroke="%232c3e50" stroke-width="3" fill="none"/></svg>');
   right: 15%;
   animation-delay: 0.6s;
 }
@@ -226,7 +227,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #FFD166;
+  background-color: var(--accent);
   opacity: 0;
   animation: confettiFall 5s linear infinite;
 }
@@ -275,9 +276,9 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(94, 53, 177, 0.9) 0%,
-    rgba(124, 77, 255, 0.8) 50%,
-    rgba(255, 82, 82, 0.7) 100%
+    rgba(74, 144, 226, 0.9) 0%,  /* primary */
+    rgba(80, 227, 194, 0.8) 50%, /* secondary */
+    rgba(245, 166, 35, 0.7) 100% /* accent */
   );
   display: flex;
   align-items: center;
@@ -292,7 +293,7 @@
 
 .overlay-content {
   text-align: center;
-  color: white;
+  color: var(--background-base);
   padding: 2rem;
   transform: translateY(20px);
   transition: transform 0.3s ease;
@@ -330,7 +331,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #FFD700;
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 

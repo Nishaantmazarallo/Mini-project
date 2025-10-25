@@ -6,6 +6,7 @@ import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import OnlineClasses from "./pages/OnlineClasses";
 import AdminEnrollments from "./pages/AdminEnrollments";
+import AdminDashboard from "./pages/AdminDashboard";
 import CreativeNavbar from "./component/CreativeNavbar/CreativeNavbar";
 
 import "./App.css";
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/online-classes" element={<OnlineClasses />} />
           <Route path="/admin/enrollments" element={<AdminEnrollments />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </main>
     </Router>

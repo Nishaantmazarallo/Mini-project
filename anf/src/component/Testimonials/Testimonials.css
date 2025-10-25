@@ -1,6 +1,6 @@
 .testimonials-section {
   padding: 100px 0;
-  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
 }
 
 .testimonials-grid {
@@ -22,6 +22,7 @@
 .testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
 }
 
 .testimonial-header {
